@@ -21,6 +21,7 @@ function onCreateClick(event) {
 
 function onDestroyClick(event) {
   containerEl.innerHTML = '';
+  valueEl.value = '';
 }
 
 

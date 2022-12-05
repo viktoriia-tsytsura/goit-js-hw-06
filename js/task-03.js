@@ -14,10 +14,9 @@ const images = [
 ];
 
 const imagesEl = images.map(item => {
-  const liEl = document.createElement('li');
-  liEl.insertAdjacentHTML("afterbegin", `<img src="${item.url}" alt="${item.alt}" width="300">`);
+  const liEl = `<li> <img src="${item.url}" alt="${item.alt}" width="300"> </li>`;
   return liEl;
 })
 
 const ulEl = document.querySelector('.gallery');
-ulEl.append(...imagesEl)
+ulEl.insertAdjacentHTML('beforeend', imagesEl.join(''))
